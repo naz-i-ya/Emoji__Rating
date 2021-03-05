@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-box {
+  width: 10%;
+}
+
+.text {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 0;
+  opacity: 0.5;
+}
+
+.text-selected {
+  opacity: 1;
+}
+
+.emoji {
+  width: 100%;
+  height: 5rem;
+  filter: grayscale(100%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.emoji:hover {
+  filter: grayscale(0);
+  transform: scale(1.3);
+  transition: transform 0.2s ease-out;
+}
+
+.emoji:hover ~ .text {
+  opacity: 1;
+}
+
+.emoji-selected {
+  filter: grayscale(0);
+  transform: scale(1.3);
+}
+
+.line {
+  width: 75%;
+  position: absolute;
+  margin: auto;
+  margin-left: auto;
+  left: 50%;
+  transform: translate(-50%);
+  top: 2.5rem;
+  z-index: -1;
+  background-color: #999;
+  border: none;
+  border-top: 3px double #999;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
